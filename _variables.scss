@@ -1,0 +1,10 @@
+$red: transparentize(#DA1639, .99);
+
+$borderRadius: 10px 0 20px 0;
+
+// Sass has more ways to deal with colors:
+//complement(#DA1639);
+// invert
+// grayscale
+// transparentize(#DA1639, .99);
+// darken(#DA1639, 10%);

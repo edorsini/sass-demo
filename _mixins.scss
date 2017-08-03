@@ -1,0 +1,4 @@
+@mixin section($color, $width: 100%) {
+    background-color: $color;
+    width: $width;
+}

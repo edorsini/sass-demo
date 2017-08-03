@@ -1,0 +1,73 @@
+// Partials
+@import "variables.scss"; // You can remove the extension, completely optional
+// Mixins
+@import "mixins";
+// Extends
+@import "extends";
+
+// Setting variables:
+$fontFace: "Helvetica, sans-serif";
+$lightGray: #999;
+$darkGray: #666;
+
+// Using variables
+body {
+    font-family: $fontFace;
+    color: $lightGray;
+}
+
+// Nesting 
+.item {
+    margin-top: 5px;
+    border-radius: $borderRadius;
+    /* list elements */
+    /* border-radius: nth($borderRadius, 1);*/
+    // Not 0 based-index
+    .title {
+        border: 1px solid $red; // Using partials
+    }
+}
+
+// Mixin
+.usingMixin {
+    @include section(#cccccc, 50%);
+}
+
+// Extend
+.usingExtend {
+    @extend .button;
+    @extend %buttonTwo;
+}
+
+// Referencing parent with & 
+.parent {
+    margin-top: 5px;
+
+    .child {
+        border: 1px solid $red; // Using partials
+        &:hover {
+            background: yellow;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Comments will show up on "expanded" */
+
+// The comments will NEVER show up
+
+/*! The comments will ALWAYS show up */
+
+//! The comments will NEVER show up
